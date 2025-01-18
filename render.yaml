@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: osm-poi-finder
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
+    buildFilter:
+      paths:
+        - server.js
+        - package.json 
